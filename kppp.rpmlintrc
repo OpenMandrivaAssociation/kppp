@@ -1,0 +1,3 @@
+# False positives on some file names
+addFilter("E: unexpanded-macro .*/usr/share/apps/kppp/Provider")
+
