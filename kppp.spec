@@ -1,6 +1,6 @@
 Summary:	KDE tool to setup PPP (Point-to-Point Protocol) connections
 Name:		kppp
-Version:	4.14.2
+Version:	4.14.3
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -62,6 +62,9 @@ List of providers for KPPP.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.3-1
+- New version 4.14.3
+
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
 - New version 4.14.2
 
