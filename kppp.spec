@@ -1,6 +1,6 @@
 Summary:	KDE tool to setup PPP (Point-to-Point Protocol) connections
 Name:		kppp
-Version:	4.13.3
+Version:	14.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -12,7 +12,7 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 BuildRequires:	kdelibs4-devel
 Requires:	ppp
@@ -62,6 +62,15 @@ List of providers for KPPP.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.3-1
+- New version 4.14.3
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.1-1
+- New version 4.14.1
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.3-1
 - New version 4.13.3
 
