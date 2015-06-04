@@ -1,6 +1,6 @@
 Summary:	KDE tool to setup PPP (Point-to-Point Protocol) connections
 Name:		kppp
-Version:	15.04.0
+Version:	15.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
