@@ -12,9 +12,9 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
-BuildRequires:	kdelibs4-devel
+BuildRequires:	kdelibs-devel
 Requires:	ppp
 Requires:	%{name}-provider = %{EVRD}
 Conflicts:	kdenetwork4-devel < 3:4.11.0
@@ -25,16 +25,17 @@ useful for connecting with a cell phone "modem" card these days. It is also use
 to configure real modem connections.
 
 %files
-%{_kde_appsdir}/kppp
-%{_kde_bindir}/kppp
-%{_kde_bindir}/kppplogview
-%{_kde_applicationsdir}/Kppp.desktop
-%{_kde_applicationsdir}/kppplogview.desktop
-%{_kde_docdir}/HTML/*/kppp
-%{_kde_iconsdir}/*/*/apps/kppp.*
-%{_datadir}/dbus-1/interfaces/org.kde.kppp.xml
-%exclude %{_kde_appsdir}/kppp/Rules
-%exclude %{_kde_appsdir}/kppp/Provider
+%{_datadir}/apps/kppp                                                                                  
+%{_bindir}/kppp                                                                                        
+%{_bindir}/kppplogview                                                                                 
+%{_datadir}/applications/kde4/Kppp.desktop                                                             
+%{_datadir}/applications/kde4/kppplogview.desktop                                                      
+%doc %{_docdir}/HTML/*/kppp                                                                            
+%{_iconsdir}/*/*/apps/kppp.*                                                                           
+%{_datadir}/dbus-1/interfaces/org.kde.kppp.xml                                                         
+%exclude %{_datadir}/apps/kppp/Rules                                                                   
+%exclude %{_datadir}/apps/kppp/Provider                                                                
+                                        
 
 #-----------------------------------------------------------
 
@@ -46,8 +47,8 @@ Group:		Graphical desktop/KDE
 List of providers for KPPP.
 
 %files provider
-%{_kde_appsdir}/kppp/Rules
-%{_kde_appsdir}/kppp/Provider
+%{_datadir}/apps/kppp/Rules                                                                            
+%{_datadir}/apps/kppp/Provider  
 
 #-------------------------------------------
 
@@ -61,47 +62,4 @@ List of providers for KPPP.
 %install
 %makeinstall_std -C build
 
-%changelog
-* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.3-1
-- New version 4.14.3
 
-* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.2-1
-- New version 4.14.2
-
-* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.14.1-1
-- New version 4.14.1
-
-* Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.3-1
-- New version 4.13.3
-
-* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.13.2-1
-- New version 4.13.2
-
-* Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
-- New version 4.12.4
-
-* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.3-1
-- New version 4.12.3
-
-* Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.2-1
-- New version 4.12.2
-
-* Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.1-1
-- New version 4.12.1
-
-* Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.4-1
-- New version 4.11.4
-
-* Wed Nov 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.3-1
-- New version 4.11.3
-
-* Wed Oct 02 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.2-1
-- New version 4.11.2
-
-* Tue Sep 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.1-1
-- New version 4.11.1
-
-* Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.0-1
-- New version 4.11.0
-- Split from kdenetwork4 package as upstream did
-- Add Conflicts with old devel package
