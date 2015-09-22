@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kppp-15.08.0.tar.xz: 2a4477720d4302300326a838dc94140fd0d9fcd4
+sources:
+  kppp-15.08.1.tar.xz: ec5806fa06c1103da7b6c312b02dff12affa04aa
