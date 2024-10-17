@@ -6,7 +6,7 @@ Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source10:	%{name}.rpmlintrc
 BuildRequires:	kdelibs-devel
